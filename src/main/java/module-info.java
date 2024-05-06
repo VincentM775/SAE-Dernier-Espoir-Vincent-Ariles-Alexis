@@ -6,4 +6,6 @@ module com.example.dernierespoirsae {
 
     opens com.example.dernierespoirsae to javafx.fxml;
     exports com.example.dernierespoirsae;
+    exports com.example.dernierespoirsae.controleur;
+    opens com.example.dernierespoirsae.controleur to javafx.fxml;
 }

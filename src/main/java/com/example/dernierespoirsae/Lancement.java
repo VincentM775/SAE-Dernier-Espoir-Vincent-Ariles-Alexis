@@ -9,5 +9,6 @@ public class Lancement {
         Environnement e = new Environnement(5, 10);
 
         e.afficherMap();
+        e.creationDuneCase();
     }
 }

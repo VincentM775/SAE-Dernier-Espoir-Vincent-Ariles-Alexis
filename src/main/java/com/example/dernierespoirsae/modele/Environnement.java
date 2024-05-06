@@ -7,6 +7,10 @@ public class Environnement {
         creerMap(ligne, colonne);
     }
 
+    public int[][] getMap() {
+        return map;
+    }
+
     public void creerMap(int ligne, int colonne){
         this.map = new int[ligne][colonne];
         for(int i = 0; i < ligne; i++){
@@ -24,6 +28,10 @@ public class Environnement {
             }
             System.out.println();
         }
+    }
+    public void creationDuneCase(){
+        this.map[2][3]=1;
+
     }
 
 }
