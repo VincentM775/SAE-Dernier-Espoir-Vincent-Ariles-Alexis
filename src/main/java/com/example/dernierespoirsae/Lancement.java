@@ -7,7 +7,7 @@ public class Lancement {
 
     public static void main(String[] args) {
 
-        Map map = new Map(225);
+        Map map = new Map(375);
         Environnement e = new Environnement(map);
 
         map.afficherMap();

@@ -24,10 +24,9 @@ public class Controleur implements Initializable {
 
 
     public void initialize(URL location, ResourceBundle ressource) {
-        Map map = new Map(225);
+        Map map = new Map(375);
         Environnement e = new Environnement(map);
-
-        map.afficherMap();
+//        map.afficherMap();
         afficherMap(map.getMap());
     }
 
