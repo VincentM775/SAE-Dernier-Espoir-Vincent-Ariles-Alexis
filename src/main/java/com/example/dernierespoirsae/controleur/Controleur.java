@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.fxml.Initializable;
 import java.util.ResourceBundle;
@@ -26,6 +27,7 @@ public class Controleur implements Initializable {
     public void initialize(URL location, ResourceBundle ressource) {
         Map map = new Map(375);
         Environnement e = new Environnement(map);
+        Acteur acteur1= new Acteur(map,"cercle");
 //        map.afficherMap();
         afficherMap(map.getMap());
     }
@@ -36,12 +38,14 @@ public class Controleur implements Initializable {
             ImageView imageView = new ImageView();
             switch (map.get(x)) {
                 case 0:
-                    Image image = new Image("file:/home/etudiants/info/abournon/IdeaProjects/DernierEspoirSAE/src/main/resources/com/example/dernierespoirsae/images/Grass_02_v2.png");
+                    Image image = new Image("file:src/main/resources/com/example/dernierespoirsae/images/Grass_02_v2.png");
                     imageView.setImage(image);
                     imageView.setFitWidth(39);
                     imageView.setFitHeight(39);
                     break;
             }
+            if (x = )
+                Circle circle = new Circle(10,);
             mapPane.getChildren().add(imageView);
         }
     }
