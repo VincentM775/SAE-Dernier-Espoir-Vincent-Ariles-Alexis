@@ -24,9 +24,9 @@ public class Environnement {
     public void afficherMap(){
         for(int i = 0; i < this.map.length; i++){
             for(int y = 0; y < this.map[i].length; y++){
-                System.out.print(this.map[i][y]);
+//                System.out.print(this.map[i][y]);
             }
-            System.out.println();
+//            System.out.println();
         }
     }
     public void creationDuneCase(){

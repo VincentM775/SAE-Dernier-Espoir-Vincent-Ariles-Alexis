@@ -3,6 +3,8 @@ package com.example.dernierespoirsae.controleur;
 import com.example.dernierespoirsae.modele.Environnement;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
@@ -18,11 +20,15 @@ public class Controleur implements Initializable{
     @FXML
     private TilePane mapPane;
 
-    public void initialize(URL location, ResourceBundle ressource){
-        Environnement e = new Environnement(30, 30);
+    @FXML
+    private Pane persoPane;
 
-        e.afficherMap();
-        e.creationDuneCase();
+
+    public void initialize(URL location, ResourceBundle ressource){
+        Environnement e = new Environnement(100, 100);
+
+//        e.afficherMap();
+//        e.creationDuneCase();
         afficherMap(e.getMap());
     }
 
@@ -32,13 +38,17 @@ public class Controleur implements Initializable{
     public void afficherMap(int[][] map){
         for (int x=0;x<map.length;x++){
             for (int y=0;y<map[x].length;y++){
-                Rectangle rectangle = new Rectangle(20,20);
+                ImageView imageView = new ImageView();
                 switch (map[x][y]){
-                    case 0 : rectangle.setFill(Color.RED); // Couleur de remplissage
+                    case 0 : Image image = new Image("file:/home/etudiants/info/abournon/IdeaProjects/DernierEspoirSAE/images/Grass_02.png");
+                    imageView.setImage(image);
+                    imageView.setFitWidth(20);
+                    imageView.setFitHeight(20);
                         break;
-                    case 1 : rectangle.setFill(Color.BLUE); // Couleur de remplissage
+//                    case 1 : rectangle.setFill(Color.BLUE); // Couleur de remplissage
+//                        break;
                 }
-                mapPane.getChildren().add(rectangle);
+                mapPane.getChildren().add(imageView);
             }
         }
     }

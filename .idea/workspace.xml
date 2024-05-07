@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c817d878-8eee-45df-ae44-6d8ba6b58dcc" name="Changes" comment="Ajout de l'affichage de la vue">
+    <list default="true" id="c817d878-8eee-45df-ae44-6d8ba6b58dcc" name="Changes" comment="Modif sur map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/Main1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/Main1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/controleur/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/controleur/Controleur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/modele/Environnement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/modele/Environnement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dernierespoirsae/vueDernierEspoir.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dernierespoirsae/vueDernierEspoir.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +57,11 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/images" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/controleur" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.dernierespoirsae" />
     </key>
@@ -97,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1714993205715</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modif sur map">
+      <created>1715071615902</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715071615902</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,6 +130,7 @@
     <MESSAGE value="Ajout des fichers xml" />
     <MESSAGE value="Ajout de la création et l'affichage de la map" />
     <MESSAGE value="Ajout de l'affichage de la vue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de l'affichage de la vue" />
+    <MESSAGE value="Modif sur map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modif sur map" />
   </component>
 </project>
