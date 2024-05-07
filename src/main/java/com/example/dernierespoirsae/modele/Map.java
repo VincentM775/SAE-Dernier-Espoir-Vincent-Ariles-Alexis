@@ -7,7 +7,7 @@ public class Map{
     private ObservableList<Integer> map;
     public Map(int n){
         this.map = FXCollections.observableArrayList();
-        creerMap(225);
+        creerMap(n);
     }
 
     public ObservableList<Integer> getMap() {

@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c817d878-8eee-45df-ae44-6d8ba6b58dcc" name="Changes" comment="Ajout des tuiles texturées">
+    <list default="true" id="c817d878-8eee-45df-ae44-6d8ba6b58dcc" name="Changes" comment="Conversion du tableau en ObservableLit et mise en place de la class Map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/Lancement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/Lancement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/controleur/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/controleur/Controleur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/modele/Environnement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/modele/Environnement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dernierespoirsae/vueDernierEspoir.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dernierespoirsae/vueDernierEspoir.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/modele/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dernierespoirsae/modele/Map.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1715082649265</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Conversion du tableau en ObservableLit et mise en place de la class Map">
+      <created>1715085322791</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715085322791</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +155,7 @@
     <MESSAGE value="Ajout de l'affichage de la vue" />
     <MESSAGE value="Modif sur map" />
     <MESSAGE value="Ajout des tuiles texturées" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout des tuiles texturées" />
+    <MESSAGE value="Conversion du tableau en ObservableLit et mise en place de la class Map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Conversion du tableau en ObservableLit et mise en place de la class Map" />
   </component>
 </project>
