@@ -19,13 +19,12 @@ import java.net.URL;
 public class Controleur implements Initializable{
     @FXML
     private TilePane mapPane;
-
     @FXML
     private Pane persoPane;
 
 
     public void initialize(URL location, ResourceBundle ressource){
-        Environnement e = new Environnement(100, 100);
+        Environnement e = new Environnement(15, 15);
 
 //        e.afficherMap();
 //        e.creationDuneCase();
@@ -40,10 +39,10 @@ public class Controleur implements Initializable{
             for (int y=0;y<map[x].length;y++){
                 ImageView imageView = new ImageView();
                 switch (map[x][y]){
-                    case 0 : Image image = new Image("file:/home/etudiants/info/abournon/IdeaProjects/DernierEspoirSAE/images/Grass_02.png");
+                    case 0 : Image image = new Image("file:/home/etudiants/info/abournon/IdeaProjects/DernierEspoirSAE/src/main/resources/com/example/dernierespoirsae/images/Grass_02_v2.png");
                     imageView.setImage(image);
-                    imageView.setFitWidth(20);
-                    imageView.setFitHeight(20);
+                    imageView.setFitWidth(65);
+                    imageView.setFitHeight(65);
                         break;
 //                    case 1 : rectangle.setFill(Color.BLUE); // Couleur de remplissage
 //                        break;
