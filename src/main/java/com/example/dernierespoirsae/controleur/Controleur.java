@@ -1,6 +1,6 @@
 package com.example.dernierespoirsae.controleur;
-
-import com.example.dernierespoirsae.modele.Environnement;
+import com.example.dernierespoirsae.modele.*;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -16,39 +16,34 @@ import java.net.URL;
 
 
 
-public class Controleur implements Initializable{
+public class Controleur implements Initializable {
     @FXML
     private TilePane mapPane;
     @FXML
     private Pane persoPane;
 
 
-    public void initialize(URL location, ResourceBundle ressource){
-        Environnement e = new Environnement(15, 15);
+    public void initialize(URL location, ResourceBundle ressource) {
+        Map map = new Map(225);
+        Environnement e = new Environnement(map);
 
-//        e.afficherMap();
-//        e.creationDuneCase();
-        afficherMap(e.getMap());
+        map.afficherMap();
+        afficherMap(map.getMap());
     }
 
 
-
-
-    public void afficherMap(int[][] map){
-        for (int x=0;x<map.length;x++){
-            for (int y=0;y<map[x].length;y++){
-                ImageView imageView = new ImageView();
-                switch (map[x][y]){
-                    case 0 : Image image = new Image("file:/home/etudiants/info/abournon/IdeaProjects/DernierEspoirSAE/src/main/resources/com/example/dernierespoirsae/images/Grass_02_v2.png");
+    public void afficherMap(ObservableList<Integer> map) {
+        for (int x = 0; x < map.size(); x++) {
+            ImageView imageView = new ImageView();
+            switch (map.get(x)) {
+                case 0:
+                    Image image = new Image("file:/home/etudiants/info/abournon/IdeaProjects/DernierEspoirSAE/src/main/resources/com/example/dernierespoirsae/images/Grass_02_v2.png");
                     imageView.setImage(image);
-                    imageView.setFitWidth(65);
-                    imageView.setFitHeight(65);
-                        break;
-//                    case 1 : rectangle.setFill(Color.BLUE); // Couleur de remplissage
-//                        break;
-                }
-                mapPane.getChildren().add(imageView);
+                    imageView.setFitWidth(39);
+                    imageView.setFitHeight(39);
+                    break;
             }
+            mapPane.getChildren().add(imageView);
         }
     }
 }

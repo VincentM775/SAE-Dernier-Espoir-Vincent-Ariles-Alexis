@@ -1,14 +1,16 @@
 package com.example.dernierespoirsae;
 
 import com.example.dernierespoirsae.modele.Environnement;
+import com.example.dernierespoirsae.modele.Map;
 
 public class Lancement {
 
     public static void main(String[] args) {
 
-        Environnement e = new Environnement(5, 10);
+        Map map = new Map(225);
+        Environnement e = new Environnement(map);
 
-        e.afficherMap();
-        e.creationDuneCase();
+        map.afficherMap();
+        map.creationDuneCase();
     }
 }
