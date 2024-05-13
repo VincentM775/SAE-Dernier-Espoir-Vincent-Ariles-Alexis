@@ -2,12 +2,16 @@ package com.example.dernierespoirsae.modele;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.ArrayList;
+
 public class Map{
 
     private ObservableList<Integer> map;
+    private ArrayList<Acteur> acteurs;
     public Map(int n){
         this.map = FXCollections.observableArrayList();
         creerMap(n);
+        this.acteurs = new ArrayList<>();
     }
 
     public ObservableList<Integer> getMap() {
