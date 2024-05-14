@@ -19,12 +19,12 @@ public class Acteur {
     }
 
 
-    public void setX(IntegerProperty x){
-        this.xProperty = x;
+    public void setX(int x){
+        this.xProperty.setValue(x);
     }
 
-    public void setY(IntegerProperty y){
-        this.xProperty = y;
+    public void setY(int y){
+        this.yProperty.setValue(y);
     }
 
     public int getX() {
@@ -40,7 +40,7 @@ public class Acteur {
     }
 
     public final IntegerProperty yProperty() {
-        return xProperty;
+        return yProperty;
     }
 
     public String getNom() {

@@ -27,6 +27,7 @@ public class Controleur implements Initializable {
     private Pane persoPane;
     @FXML
     private Pane premierPane;
+    private KeyHandler keyHandler;
 
     private Circle cercle;
 
@@ -34,9 +35,10 @@ public class Controleur implements Initializable {
 
     public void initialize(URL location, ResourceBundle ressource) {
         Map map = new Map(375,new Acteur("Jonnhy"));
-        KeyHandler keyHandler = new KeyHandler(map);
+        this.keyHandler = new KeyHandler(map);
         creerSprite(map.getJoueur());
         afficherMap(map.getMap());
+        persoPane.addEventHandler(KeyEvent.KEY_PRESSED,this.keyHandler);
     }
 
 
