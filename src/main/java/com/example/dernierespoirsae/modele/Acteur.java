@@ -7,7 +7,6 @@ public class Acteur {
 
     private IntegerProperty xProperty, yProperty;
     private String nom;
-    private Map map;
 
     public Acteur(int x,int y, String nom) {
         this.xProperty = new SimpleIntegerProperty(x);
@@ -47,18 +46,18 @@ public class Acteur {
         return nom;
     }
 
-    public void seDeplacer(String touche){
-        switch (touche){
-            case "z" :
+    public void seDeplacer(String direction){
+        switch (direction){
+            case "up" :
                 this.yProperty.setValue(getY()-5);
                 break;
-            case "d" :
+            case "right" :
                 this.xProperty.setValue(getX()+5);
                 break;
-            case "s" :
+            case "down" :
                 this.yProperty.setValue(getY()+5);
                 break;
-            case "q" :
+            case "left" :
                 this.xProperty.setValue(getX()-5);
                 break;
         }
