@@ -8,14 +8,21 @@ public class Map{
 
     private ObservableList<Integer> map;
     private ArrayList<Acteur> acteurs;
-    public Map(int n){
+    private Acteur Joueur;
+
+
+    public Map(int n, Acteur joueur){
         this.map = FXCollections.observableArrayList();
         creerMap(n);
         this.acteurs = new ArrayList<>();
+        this.Joueur = joueur;
     }
 
     public ObservableList<Integer> getMap() {
         return map;
+    }
+    public void setActeurs(Acteur acteur) {
+        this.acteurs.add(acteur);
     }
 
     public void creerMap(int n){
@@ -30,9 +37,15 @@ public class Map{
         }
         System.out.println();
     }
+
     public void creationDuneCase(){
         this.map.add(1);
 
     }
-
+    public ArrayList<Acteur> getActeurs(){
+        return this.acteurs;
+    }
+    public Acteur getJoueur() {
+        return Joueur;
+    }
 }

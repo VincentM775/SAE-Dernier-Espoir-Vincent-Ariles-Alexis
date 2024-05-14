@@ -1,39 +1,46 @@
 package com.example.dernierespoirsae.modele;
 
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 
 public class Acteur {
-    private IntegerProperty x;
-    private IntegerProperty y;
+
+    private IntegerProperty xProperty, yProperty;
     private String nom;
+    private Map map;
 
-
-    public Acteur(IntegerProperty x,IntegerProperty y, String nom) {
-        this.x = x;
-        this.y = y;
+    public Acteur(int x,int y, String nom) {
+        this.xProperty = new SimpleIntegerProperty(x);
+        this.yProperty = new SimpleIntegerProperty(y);
         this.nom = nom;
     }
-//    public Acteur( String nom) {
-//        x = //TODO;
-//        y = //TODO;
-//        this(map,x,y,nom);
-//    }
-
-
-    public int getX() {
-        return x.get();
+    public Acteur( String nom) {
+        this(0,0,nom);
     }
 
-    public IntegerProperty xProperty() {
-        return x;
+
+    public void setX(IntegerProperty x){
+        this.xProperty = x;
+    }
+
+    public void setY(IntegerProperty y){
+        this.xProperty = y;
+    }
+
+    public int getX() {
+        return xProperty.getValue();
+    }
+
+    public final IntegerProperty xProperty() {
+        return xProperty;
     }
 
     public int getY() {
-        return y.get();
+        return yProperty.getValue();
     }
 
-    public IntegerProperty yProperty() {
-        return y;
+    public final IntegerProperty yProperty() {
+        return xProperty;
     }
 
     public String getNom() {
@@ -43,16 +50,16 @@ public class Acteur {
     public void seDeplacer(String touche){
         switch (touche){
             case "z" :
-                this.y.setValue(getY()-30);
+                this.yProperty.setValue(getY()-5);
                 break;
             case "d" :
-                this.x.setValue(getX()+30);
+                this.xProperty.setValue(getX()+5);
                 break;
             case "s" :
-                this.y.setValue(getY()+30);
+                this.yProperty.setValue(getY()+5);
                 break;
             case "q" :
-                this.x.setValue(getX()-30);
+                this.xProperty.setValue(getX()-5);
                 break;
         }
     }

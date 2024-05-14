@@ -1,4 +1,4 @@
-package com.example.dernierespoirsae;
+/*package com.example.dernierespoirsae;
 
 import com.example.dernierespoirsae.modele.Environnement;
 import com.example.dernierespoirsae.modele.Map;
@@ -14,3 +14,4 @@ public class Lancement {
         map.creationDuneCase();
     }
 }
+*/

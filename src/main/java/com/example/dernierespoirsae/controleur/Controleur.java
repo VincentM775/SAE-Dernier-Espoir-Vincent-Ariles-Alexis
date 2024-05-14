@@ -16,7 +16,6 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.fxml.Initializable;
 import java.util.ResourceBundle;
-
 import java.net.URL;
 
 
@@ -31,14 +30,13 @@ public class Controleur implements Initializable {
 
     private Circle cercle;
 
+    private Map map;
+
     public void initialize(URL location, ResourceBundle ressource) {
-        Map map = new Map(375);
-        cercle = new Circle(100, 100, 50);
-        cercle.setFill(Color.BLUE);
-        persoPane.getChildren().add(cercle);
-        Environnement e = new Environnement(map);
+        Map map = new Map(375,new Acteur("Jonnhy"));
+        KeyHandler keyHandler = new KeyHandler(map);
+        creerSprite(map.getJoueur());
         afficherMap(map.getMap());
-//        placerPerso();
     }
 
 
@@ -56,20 +54,12 @@ public class Controleur implements Initializable {
             mapPane.getChildren().add(imageView);
         }
     }
-
-//    public void placerPerso(){
-//        Circle cercle = new Circle(50, 50, 100);
-//        cercle.setFill(Color.BLUE);
-//        persoPane.getChildren().add(cercle);
-//    }
-
-    public void persoKeyPressed(KeyEvent keyEvent) {
-        switch (keyEvent.getCode()){
-            case Q -> cercle.setTranslateX(cercle.getTranslateX()-5);
-            case D -> cercle.setTranslateX(cercle.getTranslateX()+5);
-            case Z -> cercle.setTranslateY(cercle.getTranslateY()-5);
-            case S -> cercle.setTranslateY(cercle.getTranslateY()+5);
-        }
+    public void creerSprite(Acteur acteur){
+        cercle = new Circle(100, 100, 20);
+        cercle.setFill(Color.RED);
+        cercle.translateXProperty().bind(acteur.xProperty());
+        cercle.translateYProperty().bind(acteur.yProperty());
+        persoPane.getChildren().add(cercle);
     }
 
     public void mouseClicked(MouseEvent mouseEvent) {
