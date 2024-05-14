@@ -28,7 +28,7 @@ public class Controleur implements Initializable {
     private Environnement environnement;
 
     public void initialize(URL location, ResourceBundle ressource) {
-        Environnement environnement = new Environnement(375,new Acteur("Jonnhy"));
+        Environnement environnement = new Environnement(375,new Acteur(500, 300, "Jonnhy"));
         this.keyHandler = new KeyHandler(environnement);
         creerSprite(environnement.getJoueur());
         afficherMap(environnement.getMap());
@@ -52,7 +52,7 @@ public class Controleur implements Initializable {
         }
     }
     public void creerSprite(Acteur acteur){
-        Circle cercle = new Circle(100, 100, 20);
+        Circle cercle = new Circle(20 );
         cercle.setFill(Color.RED);
         cercle.translateXProperty().bind(acteur.xProperty());
         cercle.translateYProperty().bind(acteur.yProperty());
