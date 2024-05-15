@@ -2,21 +2,29 @@ package com.example.dernierespoirsae.modele;
 
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.fxml.FXML;
+import javafx.scene.layout.TilePane;
 
 public class Acteur {
 
     private IntegerProperty xProperty, yProperty;
     private String nom;
     private Environnement environnement;
+    private int longTuile;
+    private int largeTuile;
+    private int nbTuile;
 
-    public Acteur(int x,int y, String nom, Environnement environnement) {
+    public Acteur(int x,int y, String nom, Environnement environnement, int longTuile, int largeTuile, int nbTuile) {
         this.xProperty = new SimpleIntegerProperty(x);
         this.yProperty = new SimpleIntegerProperty(y);
         this.nom = nom;
         this.environnement = environnement;
+        this.longTuile = longTuile;
+        this.largeTuile = largeTuile;
+        this.nbTuile = nbTuile;
     }
-    public Acteur( String nom, Environnement environnement) {
-        this(300,260,nom, environnement);
+    public Acteur( String nom, Environnement environnement, int longTuile, int largeTuile, int nbTuile) {
+        this(300,260,nom, environnement, longTuile, largeTuile, nbTuile);
     }
 
 
@@ -78,7 +86,9 @@ public class Acteur {
 
     public boolean collision(Environnement environnement){
 
-        int position = (this.getX()/40)+(this.getY()/40*25);
+        int position = (int) ((this.getX() / this.longTuile) + (this.getY() / this.largeTuile * nbTuile));
+//        int position = (int) ((this.getX() / 40) + (this.getY() / 40 * 25));
+
         if(position % 25 == 0 || position % 25 == 24 || position > 0 && position < 25 || position > 350 && position < 375 || environnement.getMap().getListTuiles().get(position) != 0)
             return false;
         return true;
