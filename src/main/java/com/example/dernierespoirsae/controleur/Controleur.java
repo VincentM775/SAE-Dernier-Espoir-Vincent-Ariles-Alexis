@@ -28,19 +28,22 @@ public class Controleur implements Initializable {
     private Environnement environnement;
 
     public void initialize(URL location, ResourceBundle ressource) {
-        Environnement environnement = new Environnement(375,new Acteur(500, 300, "Jonnhy"));
+        Environnement environnement = new Environnement(375);
+        Acteur joueur = new Acteur("Johnny", environnement);
+        environnement.setJoueur(joueur);
         this.keyHandler = new KeyHandler(environnement);
         creerSprite(environnement.getJoueur());
         afficherMap(environnement.getMap());
+
         persoPane.addEventHandler(KeyEvent.KEY_PRESSED,this.keyHandler);
         persoPane.requestFocus();
     }
 
 
     public void afficherMap(Map map) {
-        for (int x = 0; x < map.getMap().size(); x++) {
+        for (int x = 0; x < map.getListTuiles().size(); x++) {
             ImageView imageView = new ImageView();
-            switch (map.getMap().get(x)) {
+            switch (map.getListTuiles().get(x)) {
                 case 0:
                     Image image = new Image("file:src/main/resources/com/example/dernierespoirsae/images/Grass_02_v2.png");
                     imageView.setImage(image);

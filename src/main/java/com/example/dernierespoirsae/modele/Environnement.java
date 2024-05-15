@@ -12,10 +12,11 @@ public class Environnement{
     private Map map;
 
 
-    public Environnement(int n, Acteur joueur){
-        this.map = new Map(n);
+    public Environnement(int n){
+//        this.map = new Map(n);
+        this.map = new Map();
         this.acteurs = new ArrayList<>();
-        this.Joueur = joueur;
+        this.Joueur = null;
     }
 
     public void addActeurs(Acteur acteur) {
@@ -30,5 +31,9 @@ public class Environnement{
     }
     public Map getMap() {
         return this.map;
+    }
+
+    public void setJoueur(Acteur joueur) {
+        Joueur = joueur;
     }
 }
